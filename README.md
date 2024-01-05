@@ -1,5 +1,7 @@
 # A PyTorch Polynomial and Fourier series acceleration modules
 
+This is the DDDM implementation that is been used in the paper: [Gaussian-Flow: 4D Reconstruction with Dynamic 3D Gaussian Particle](https://arxiv.org/abs/2312.03431).
+
 ## Installation
 
 ```bash
@@ -25,4 +27,17 @@ t_array = torch.linspace(0, 1, num_points).reshape(-1, 1)
 fit_model = polyfourier.get_fit_model(type_name='poly_fourier')
 
 output = fit_model(params, t_array, feature_dim)
+```
+
+## Citation
+
+If you find this code useful, please cite our paper:
+
+```bibtex
+@article{lin2023gaussian,
+  title={Gaussian-Flow: 4D Reconstruction with Dynamic 3D Gaussian Particle},
+  author={Lin, Youtian and Dai, Zuozhuo and Zhu, Siyu and Yao, Yao},
+  journal={arXiv preprint arXiv:2312.03431},
+  year={2023}
+}
 ```
