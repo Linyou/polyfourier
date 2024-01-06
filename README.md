@@ -5,7 +5,7 @@ This is the DDDM implementation that is been used in the paper: [Gaussian-Flow: 
 ## Installation
 
 ```bash
-python -m pip install git+https://github.com/Linyou/poly_fourier.git
+python -m pip install git+https://github.com/Linyou/polyfourier.git
 ```
 
 ## Usage
@@ -28,6 +28,7 @@ init_shape = (num_points, feature_dim, output_dim)
 params = torch.nn.Parameter(torch.randn(init_shape).requires_grad_()).cuda()
 t_array = torch.linspace(0, 1, num_points).reshape(-1, 1).cuda()
 
+# type_name should be 'poly', 'fourier' and 'poly_fourier'
 fit_model = polyfourier.get_fit_model(type_name='poly_fourier')
 
 output = fit_model(params, t_array, feature_dim)
